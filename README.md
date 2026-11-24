@@ -113,7 +113,14 @@ build.bat                   一键打包（aapt2 → javac → d8 → 注入 →
 
 ## 赞赏
 
-App 一直免费。如果它每天帮你省下几分钟，可以在[下载页](https://www.cniuu.com/dl/hongguo.html)扫码请我喝杯咖啡。赞赏纯属自愿，不解锁任何功能。
+App 一直免费。如果它每天帮你省下几分钟，可以扫码请我喝杯咖啡。赞赏纯属自愿，不解锁任何功能，也与红果会员权益无关。
+
+| 微信支付 | 支付宝 |
+| :---: | :---: |
+| <img src="dist/wechat_pay.jpg" alt="微信赞赏码" width="260"> | <img src="dist/alipay.jpg" alt="支付宝收款码" width="260"> |
+| 长按识别 / 扫码 | 长按识别 / 扫码 |
+
+> 也可以在[下载页](https://www.cniuu.com/dl/hongguo.html)直接扫码。
 
 ## 免责声明
 
