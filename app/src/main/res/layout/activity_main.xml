@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingLeft="18dp"
+        android:paddingTop="26dp"
+        android:paddingRight="18dp"
+        android:paddingBottom="30dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="红果净化"
+            android:textColor="#FF1A1A1C"
+            android:textSize="28sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="18dp"
+            android:lineSpacingExtra="3dp"
+            android:text="针对 红果免费短剧（com.phoenix.read）\n自动跳过广告 + 阻断广告请求，免 root。"
+            android:textColor="#FF6B6B70"
+            android:textSize="14sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1. 自动跳过广告"
+                android:textColor="#FF1A1A1C"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/accStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#FFF1F1F3"
+                android:padding="12dp"
+                android:text="无障碍服务：检测中…"
+                android:textColor="#FF2E2E32"
+                android:textSize="15sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp"
+                android:text="识别剧集流里的插播广告页：倒计时结束后自动上滑继续，同时自动点击“跳过 / 跳过 5s / 关闭广告 / 跳过片头”等按钮，只对红果生效。"
+                android:textColor="#FF6B6B70"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="2. 拦截广告请求（VPN）"
+                    android:textColor="#FF1A1A1C"
+                    android:textSize="17sp"
+                    android:textStyle="bold" />
+
+                <Switch
+                    android:id="@+id/vpnSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/vpnState"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="未开启"
+                android:textColor="#FF6B6B70"
+                android:textSize="13sp" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:lineSpacingExtra="2dp"
+                android:text="把 ad.zijieapi.com / ads*.zijieapi.com / *.oceanengine.com 等广告域名解析到的 IP 加入黑洞（/32 路由），只接管这些 IP，不影响其他 App 上网。"
+                android:textColor="#FF6B6B70"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/tvStats"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="今日：跳过 0 次 · 拦截 0 个连接"
+                android:textColor="#FF1A1A1C"
+                android:textSize="16sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/btnOpen"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:text="打开红果" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:background="@drawable/bg_card"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3. 自定义拦截域名"
+                android:textColor="#FF1A1A1C"
+                android:textSize="17sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <EditText
+                    android:id="@+id/etHost"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:hint="例如 ads.example.com"
+                    android:inputType="textUri"
+                    android:maxLines="1"
+                    android:textSize="14sp" />
+
+                <Button
+                    android:id="@+id/btnAddHost"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="8dp"
+                    android:text="添加" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tvHosts"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="当前拦截域名：0 个"
+                android:textColor="#FF6B6B70"
+                android:textSize="13sp" />
+
+            <Button
+                android:id="@+id/btnResetHosts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="6dp"
+                android:text="清除自定义域名"
+                android:textSize="13sp" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:lineSpacingExtra="3dp"
+            android:text="说明\n· 免 root 无法改动红果安装包本体，本 App 用系统无障碍 + VpnService 从外部减少广告。\n· 广告 SDK 通过 HTTPDNS 轮换 IP/域名，若仍弹广告，可把新域名加到上面；VPN 每 10 分钟重新解析一次。\n· Android 13 及以上从浏览器/文件管理器安装后，需先到「应用信息 → 受限设置」允许，才能打开无障碍开关。\n· 开启 VPN 时系统会显示钥匙图标，这是 Android 的正常提示。"
+            android:textColor="#FF8A8A90"
+            android:textSize="12sp" />
+    </LinearLayout>
+</ScrollView>

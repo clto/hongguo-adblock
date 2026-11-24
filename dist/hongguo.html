@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#111114">
+<title>红果净化 v1.1 · 红果短剧广告辅助</title>
+<style>
+  :root {
+    --bg: #0f0f12;
+    --card: #191a1e;
+    --line: #2a2b31;
+    --text: #f2f2f5;
+    --muted: #9a9aa3;
+    --red: #e53935;
+    --red-dark: #c62828;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: radial-gradient(1200px 500px at 50% -10%, #2a1416 0%, var(--bg) 55%) no-repeat var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+  .wrap { max-width: 720px; margin: 0 auto; padding: 28px 18px 56px; }
+  header { text-align: center; padding-top: 10px; }
+  .logo {
+    width: 74px; height: 74px; margin: 0 auto 16px; border-radius: 20px;
+    background: linear-gradient(145deg, #ff5a52, #b71c1c);
+    display: flex; align-items: center; justify-content: center;
+    box-shadow: 0 12px 30px rgba(229,57,53,.28);
+  }
+  .logo svg { width: 42px; height: 42px; }
+  h1 { font-size: 27px; margin: 0 0 6px; letter-spacing: .5px; }
+  .sub { color: var(--muted); font-size: 14px; margin: 0; }
+  .meta { margin-top: 14px; color: var(--muted); font-size: 13px; }
+  .meta span { margin: 0 6px; }
+  .cta {
+    display: block; margin: 26px 0 10px; padding: 17px 20px;
+    background: linear-gradient(135deg, #ff4d45, var(--red-dark));
+    color: #fff; text-align: center; text-decoration: none;
+    border-radius: 15px; font-size: 18px; font-weight: 700; letter-spacing: 1px;
+    box-shadow: 0 10px 26px rgba(229,57,53,.30);
+  }
+  .cta:active { transform: translateY(1px); }
+  .cta small { display: block; font-size: 12px; font-weight: 400; opacity: .85; letter-spacing: 0; margin-top: 2px; }
+  .hash {
+    margin: 12px 0 0; padding: 10px 12px; background: #141418; border: 1px solid var(--line);
+    border-radius: 10px; font-family: ui-monospace, Consolas, monospace;
+    font-size: 11px; color: var(--muted); word-break: break-all; text-align: left;
+  }
+  .hash b { color: #d8d8de; font-weight: 600; }
+  section { margin-top: 26px; }
+  h2 { font-size: 17px; margin: 0 0 12px; }
+  .grid { display: grid; gap: 10px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+    padding: 15px 16px;
+  }
+  .card h3 { margin: 0 0 5px; font-size: 15px; }
+  .card p { margin: 0; color: var(--muted); font-size: 13px; }
+  .tag {
+    display: inline-block; font-size: 11px; padding: 1px 8px; border-radius: 999px;
+    background: rgba(229,57,53,.15); color: #ff8a84; margin-bottom: 7px;
+  }
+  ol.steps { margin: 0; padding-left: 20px; color: #cfcfd6; font-size: 14px; }
+  ol.steps li { margin: 9px 0; }
+  ol.steps b { color: #fff; }
+  .shot {
+    display: block; width: 100%; border-radius: 16px; border: 1px solid var(--line);
+    margin-top: 4px;
+  }
+  .note {
+    background: #1b1516; border: 1px solid #3a2324; border-radius: 14px;
+    padding: 14px 16px; color: #c9b7b8; font-size: 13px;
+  }
+  .note b { color: #ffb4ae; }
+  .note ul { margin: 8px 0 0; padding-left: 18px; }
+  .note li { margin: 5px 0; }
+  .log { color: var(--muted); font-size: 13px; }
+  .log li { margin: 5px 0; }
+  .qr { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+  .qr figure {
+    margin: 0; padding: 10px; text-align: center;
+    background: var(--card); border: 1px solid var(--line); border-radius: 14px;
+  }
+  .qr img { display: block; width: 100%; border-radius: 10px; }
+  .qr figcaption { margin-top: 8px; font-size: 13px; color: var(--muted); }
+  .qr figcaption b { color: #f2f2f5; font-weight: 600; }
+  .tip { color: var(--muted); font-size: 12px; margin: 10px 2px 0; }
+  footer { margin-top: 34px; text-align: center; color: #62626b; font-size: 12px; }
+  code { font-family: ui-monospace, Consolas, monospace; font-size: 12px; color: #d8d8de; }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header>
+    <div class="logo">
+      <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M24 5 8 11v12c0 10 6.8 17.4 16 20 9.2-2.6 16-10 16-20V11L24 5Z" fill="#fff" opacity=".96"/>
+        <path d="M20 17.5v13l11-6.5-11-6.5Z" fill="#c62828"/>
+      </svg>
+    </div>
+    <h1>红果净化</h1>
+    <p class="sub">红果免费短剧（com.phoenix.read）广告辅助 · 免 root</p>
+    <p class="meta">v1.1 <span>·</span> 33 KB <span>·</span> Android 8.0+ <span>·</span> 2026-11-21</p>
+  </header>
+
+  <a class="cta" href="hongguo_adblock.apk" download>
+    下载安装包（APK）
+    <small>点上面按钮下载，安装后按下方步骤开启</small>
+  </a>
+  <p class="hash"><b>SHA-256</b><br>b818d7fd7767513752fe85bab67c758740ad4dc0cf835e37bbc111b385c4171c</p>
+
+  <section>
+    <h2>这一版做了什么</h2>
+    <div class="grid">
+      <div class="card">
+        <span class="tag">v1.1 新增</span>
+        <h3>插播广告页自动上滑</h3>
+        <p>刷到第 7、8 集插进来的整屏广告，倒计时结束后底部会出现“上滑继续观看短剧”，App 会立刻替你上滑翻到下一集。</p>
+      </div>
+      <div class="card">
+        <span class="tag">自动点击</span>
+        <h3>跳过 / 关闭广告按钮</h3>
+        <p>识别“跳过 / 跳过 5s / 关闭广告 / 关闭此条广告 / 跳过片头”，以及广告页右上角没有文字的关闭图标。</p>
+      </div>
+      <div class="card">
+        <span class="tag">可选</span>
+        <h3>广告域名黑洞（VPN）</h3>
+        <p>把 ad.zijieapi.com、ads*.zijieapi.com、*.oceanengine.com 等广告域名的 IP 拉黑，只接管这些 IP，不影响其他 App 上网。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>安装与开启（4 步）</h2>
+    <div class="card">
+      <ol class="steps">
+        <li>点上面的下载按钮，得到 <b>hongguo_adblock.apk</b>，点击安装；浏览器提示“未知来源”时选择允许。</li>
+        <li>安装后打开「红果净化」。</li>
+        <li>点第 1 张卡片 → 系统无障碍设置 → 开启 <b>红果广告自动跳过</b>。</li>
+        <li>（可选）打开第 2 张卡片的 VPN 开关，系统弹“连接请求”时点确定。</li>
+      </ol>
+    </div>
+  </section>
+
+  <section>
+    <h2>界面预览</h2>
+    <img class="shot" src="main.jpg" alt="红果净化主界面截图" loading="lazy">
+  </section>
+
+  <section>
+    <h2>注意</h2>
+    <div class="note">
+      <b>Android 13 及以上：</b>从浏览器安装后，如果无障碍开关是灰的，去「设置 → 应用 → 红果净化 → 右上角 ⋮ → 允许受限设置」，再回来开启。
+      <ul>
+        <li>插播广告的强制观看倒计时由红果自己计时，本 App 只能等它结束再自动上滑，不能把 5 秒倒计时直接清零。</li>
+        <li>如果广告页是纯视频/自绘界面、系统读不到任何文字，可能仍会漏过；可以截图发我，按那个界面再加规则。</li>
+        <li>开启 VPN 时状态栏会出现钥匙图标，这是 Android 对 VPN 的正常提示；同一时间只能开一个 VPN。</li>
+        <li>部分手机省电策略会杀后台，建议把本 App 加入电池白名单。</li>
+        <li>不能替代红果会员的“免广告”权益；仅供个人学习研究使用。</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>赞赏支持</h2>
+    <p class="sub" style="margin-bottom:12px">App 一直免费。如果它每天帮你省下几分钟，可以扫码请我喝杯咖啡，主要用于后续版本维护。</p>
+    <div class="qr">
+      <figure>
+        <img src="wechat_pay.jpg" alt="微信赞赏码" loading="lazy">
+        <figcaption><b>微信支付</b><br>长按识别 / 扫码</figcaption>
+      </figure>
+      <figure>
+        <img src="alipay.jpg" alt="支付宝收款码" loading="lazy">
+        <figcaption><b>支付宝</b><br>长按识别 / 扫码</figcaption>
+      </figure>
+    </div>
+    <p class="tip">赞赏纯属自愿，金额随意；不解锁任何功能，也与红果会员权益无关。</p>
+  </section>
+
+  <section>
+    <h2>更新日志</h2>
+    <div class="card">
+      <ul class="log">
+        <li><b>v1.1（2026-11-21）</b>：新增插播广告页识别与自动上滑；新增右上角无文字关闭图标点击；补全“关闭此条广告 / 跳过广告”等文案；无障碍增加手势能力。</li>
+        <li>v1.0（2026-11-21）：首个版本，跳过按钮自动点击 + 广告域名 VPN 黑洞。</li>
+      </ul>
+    </div>
+  </section>
+
+  <footer>红果净化 · 免 root 外部辅助 · 不修改红果安装包</footer>
+</div>
+</body>
+</html>

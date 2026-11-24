@@ -1,0 +1,23 @@
+# build output
+build/
+
+# signing keys: never publish
+keystore/
+*.jks
+*.keystore
+
+# local artifacts
+*.idsig
+local.properties
+.gradle/
+.gradle-wrapper/
+.idea/
+*.iml
+
+# os junk
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# preview captures
+dist/page_qr_mobile.png

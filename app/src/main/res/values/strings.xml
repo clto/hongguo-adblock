@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">红果净化</string>
+    <string name="skip_service_label">红果广告自动跳过</string>
+    <string name="acc_desc">仅对红果免费短剧（com.phoenix.read）生效：识别屏幕上的“跳过 / 关闭广告 / 跳过片头”按钮并自动点击，用于减少开屏、插屏和片头广告的停留时间。不会读取或上传你的任何内容。</string>
+</resources>
